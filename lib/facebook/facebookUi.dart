@@ -112,6 +112,38 @@ class FacebookUi extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Container(
+        margin: const EdgeInsets.only(bottom: 12),
+        height: 40,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            const Icon(
+              Icons.web,
+              color: Colors.blue,
+              size: 35,
+            ),
+            Icon(
+              Icons.group_outlined,
+              color: Colors.grey[600],
+              size: 35,
+            ),
+            Icon(
+              Icons.smart_display_outlined,
+              color: Colors.grey[600],
+              size: 35,
+            ),
+            Icon(
+              Icons.notifications_outlined,
+              color: Colors.grey[600],
+              size: 35,
+            ),
+            const CircleAvatar(
+              backgroundImage: AssetImage("assets/images/fun.jpg"),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
