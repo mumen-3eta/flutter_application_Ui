@@ -49,34 +49,34 @@ class FacebookUi extends StatelessWidget {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: Row(
-                  children: const [
-                    Text(
-                      'Stories',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                    Spacer(),
-                    Text(
-                      'See Archive',
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    Icon(
-                      Icons.keyboard_arrow_right,
-                      color: Colors.grey,
-                      size: 20,
-                    ),
-                  ],
-                ),
-              ),
               Expanded(
                 child: ListView(
                   children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: Row(
+                        children: const [
+                          Text(
+                            'Stories',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                          Spacer(),
+                          Text(
+                            'See Archive',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          Icon(
+                            Icons.keyboard_arrow_right,
+                            color: Colors.grey,
+                            size: 20,
+                          ),
+                        ],
+                      ),
+                    ),
                     SizedBox(
                       height: 150,
                       child: ListView(
@@ -110,6 +110,38 @@ class FacebookUi extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        margin: const EdgeInsets.only(bottom: 12),
+        height: 40,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            const Icon(
+              Icons.web,
+              color: Colors.blue,
+              size: 35,
+            ),
+            Icon(
+              Icons.group_outlined,
+              color: Colors.grey[600],
+              size: 35,
+            ),
+            Icon(
+              Icons.smart_display_outlined,
+              color: Colors.grey[600],
+              size: 35,
+            ),
+            Icon(
+              Icons.notifications_outlined,
+              color: Colors.grey[600],
+              size: 35,
+            ),
+            const CircleAvatar(
+              backgroundImage: AssetImage("assets/images/fun.jpg"),
+            )
+          ],
         ),
       ),
     );
