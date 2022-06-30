@@ -50,7 +50,7 @@ class FacebookUi extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 40),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Row(
                   children: const [
                     Text(
@@ -74,28 +74,37 @@ class FacebookUi extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    FacebookStory(),
-                    FacebookStory(),
-                    FacebookStory(),
-                    FacebookStory(),
-                    FacebookStory(),
-                    FacebookStory(),
-                  ],
-                ),
-              ),
               Expanded(
                 child: ListView(
                   children: [
-                    FacebookPost(),
-                    FacebookPost(),
-                    FacebookPost(),
-                    FacebookPost(),
-                    FacebookPost()
+                    SizedBox(
+                      height: 150,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          FacebookStory(),
+                          FacebookStory(),
+                          FacebookStory(),
+                          FacebookStory(),
+                          FacebookStory(),
+                          FacebookStory(),
+                        ],
+                      ),
+                    ),
+                    const Divider(
+                      color: Colors.grey,
+                    ),
+                    SizedBox(
+                      child: Column(
+                        children: [
+                          FacebookPost(),
+                          FacebookPost(),
+                          FacebookPost(),
+                          FacebookPost(),
+                          FacebookPost()
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),

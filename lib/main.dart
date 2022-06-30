@@ -7,6 +7,6 @@ import 'instgram/instagramUi.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: FacebookAlum(),
+    home: FacebookUi(),
   ));
 }
