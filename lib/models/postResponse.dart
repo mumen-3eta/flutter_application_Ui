@@ -5,6 +5,8 @@ class postResponse {
   late User user;
   late Post post;
 
+  postResponse.fromFile(this.user, this.post);
+
   postResponse.formJason(Map<String, dynamic> data) {
     user = User.fromJason(data['user']);
     post = Post.fromJason(data['post']);

@@ -43,10 +43,15 @@ class PostWidget extends StatelessWidget {
         SizedBox(
           height: 300,
           width: 10000,
-          child: Image.network(
-            post.image ?? "",
-            fit: BoxFit.cover,
-          ),
+          child: post.file == null
+              ? Image.network(
+                  post.image ?? "",
+                  fit: BoxFit.cover,
+                )
+              : Image.file(
+                  post.file!,
+                  fit: BoxFit.cover,
+                ),
         ),
         Container(
           margin: const EdgeInsets.all(5),
